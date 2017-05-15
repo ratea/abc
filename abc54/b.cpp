@@ -11,7 +11,7 @@ int main(){
 	for(int i = 0;i<n;i++)cin>>a[i];
 	for(int i = 0;i<m;i++)cin>>b[i];
 	
-	int ans;
+	int ans=1;
 	for(int i = 0;i<n-m+1;i++){
 		for(int l = 0;l<n-m+1;l++){
 			ans=1;
@@ -21,10 +21,10 @@ int main(){
 						ans=0;
 					}
 				}
+			}
 				if(ans==1){
 				cout<<"Yes"<<endl;
 				return 0;
-				}
 			}
 		}
 	}
