@@ -4,6 +4,7 @@ using namespace std;
 int main(){
 	int w,h;
 	cin>>w>>h;
+	long long int mod=1000000007;
 	
 	w--;
 	h--;
@@ -14,14 +15,14 @@ int main(){
 	long long int ansa=1;
 	
 	for(int i = ac;i>ac-bc;i--){
-		ansa*=i;
+		ansa=ansa*i%mod;
 	}
 	//cout<<ansa<<endl;
 	
 	long long int ansb=1;
 	
 	for(int i = bc;i>0;i--){
-		ansb*=i;
+		ansb=ansb*i%mod;
 	}
 	//cout<<ansb<<endl;
 	
