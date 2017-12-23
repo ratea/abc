@@ -6,13 +6,17 @@ int main(){
 	cin>>s;
 	
 	map<char,int> mp;
+	int sm=0;
 	for(int i=0;i<s.size();i++){
 		mp[s[i]]++;
+		sm=max(sm,mp[s[i]]);
 	}
 	
-	if(max(mp['a'],max(mp['b'],mp['c']))-min(mp['a'],min(mp['b'],mp['c']))<=1){
+	if(sm<=s.size()/2){
 		cout<<"YES"<<endl;
 	}else{
 		cout<<"NO"<<endl;
 	}
+	
+	return 0;
 }
