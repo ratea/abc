@@ -24,7 +24,9 @@ int main(){
     long long int anstmp=0;
     for(long long int j=0;j<C;j++){
       tmp[j]+=imos[j][i];
-      if(tmp[j]!=0)anstmp++;
+      if(tmp[j]>1)tmp[j]=1;
+      if(tmp[j]<0)tmp[j]=0;
+      anstmp+=tmp[j];
     }
     if(i%2==1)ans=max(ans,anstmp);
   }
